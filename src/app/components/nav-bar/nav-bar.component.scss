@@ -1,0 +1,55 @@
+.nav-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 18px 0;
+  background-color: var(--app-background);
+
+  .nav-content {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo-section {
+      width: 40px;
+      height: 40px;
+      background-image: url("../../../../assets/images/logo.svg");
+    }
+
+    .links-section {
+      ul {
+        display: flex;
+        column-gap: 30px;
+
+        div {
+          display: flex;
+          align-items: center;
+          column-gap: 9px;
+
+          li {
+            list-style: none;
+            color: var(--app-text-gray);
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          i {
+            color: var(--app-text-gray)
+          }
+        }
+
+        .active-item {
+          li {
+            color: var(--app-primary);
+          }
+
+          i {
+            color: var(--app-primary)
+          }
+        }
+      }
+    }
+  }
+}
