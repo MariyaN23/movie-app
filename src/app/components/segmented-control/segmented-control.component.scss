@@ -1,0 +1,21 @@
+.segmented-control-component {
+  display: flex;
+  width: fit-content;
+  padding: 8px;
+  background: var(--background-gray);
+  border-radius: 8px;
+
+  .segment {
+    padding: 8px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--app-text-gray-400);
+    cursor: pointer;
+  }
+
+  .active-item {
+    background-color: var(--app-primary-400);
+    color: var(--app-primary-50);
+    border-radius: 8px;
+  }
+}

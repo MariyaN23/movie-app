@@ -27,19 +27,19 @@
 }
 .nav-bar-container .nav-content .links-section ul div li {
   list-style: none;
-  color: var(--app-text-gray);
+  color: var(--app-text-gray-500);
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
 }
 .nav-bar-container .nav-content .links-section ul div i {
-  color: var(--app-text-gray);
+  color: var(--app-text-gray-500);
 }
 .nav-bar-container .nav-content .links-section ul .active-item li {
-  color: var(--app-primary);
+  color: var(--app-primary-500);
 }
 .nav-bar-container .nav-content .links-section ul .active-item i {
-  color: var(--app-primary);
+  color: var(--app-primary-500);
 }
 
 /*# sourceMappingURL=nav-bar.component.css.map */

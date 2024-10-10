@@ -29,24 +29,24 @@
 
           li {
             list-style: none;
-            color: var(--app-text-gray);
+            color: var(--app-text-gray-500);
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
           }
 
           i {
-            color: var(--app-text-gray)
+            color: var(--app-text-gray-500)
           }
         }
 
         .active-item {
           li {
-            color: var(--app-primary);
+            color: var(--app-primary-500);
           }
 
           i {
-            color: var(--app-primary)
+            color: var(--app-primary-500)
           }
         }
       }

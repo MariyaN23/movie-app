@@ -1,0 +1,22 @@
+.input-container {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  column-gap: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color-500);
+  background-color: var(--background-dark);
+
+  i {
+    font-size: 19px;
+    color: var(--app-text-gray-500);
+  }
+
+  input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+  }
+}
