@@ -1,0 +1,19 @@
+.movie-rate-container {
+  display: flex;
+  column-gap: 5px;
+  color: var(--rating-color);
+  background-color: var(--background-dark-700);
+  padding: 5px 8px;
+  border-radius: 7px;
+  width: fit-content;
+}
+.movie-rate-container i {
+  color: var(--rating-color);
+}
+.movie-rate-container span {
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--rating-color);
+}
+
+/*# sourceMappingURL=movie-rate.component.css.map */

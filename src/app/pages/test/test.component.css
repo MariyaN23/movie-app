@@ -1,0 +1,9 @@
+.movies-section {
+  display: flex;
+  column-gap: 20px;
+}
+.movies-section .movie-card {
+  width: 50%;
+}
+
+/*# sourceMappingURL=test.component.css.map */

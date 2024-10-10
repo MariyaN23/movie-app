@@ -5,7 +5,7 @@
   column-gap: 10px;
   border-radius: 14px;
   border: 1px solid var(--border-color-500);
-  background-color: var(--background-dark);
+  background-color: var(--background-dark-800);
 }
 .input-container i {
   font-size: 19px;
