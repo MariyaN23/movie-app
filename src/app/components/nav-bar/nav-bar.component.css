@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   padding: 18px 0;
-  background-color: var(--app-background);
+  background-color: var(--background-dark-800);
 }
 .nav-bar-container .nav-content {
   width: 80%;
@@ -15,6 +15,7 @@
   width: 40px;
   height: 40px;
   background-image: url("../../../../assets/images/logo.svg");
+  cursor: pointer;
 }
 .nav-bar-container .nav-content .links-section ul {
   display: flex;

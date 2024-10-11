@@ -1,1 +1,26 @@
-<p>home works!</p>
+<div class="home-page-container">
+  <div class="home-page-content">
+    <div class="title-container">
+      <p>Movie app</p>
+      @if (title) {
+        <h2>{{ title }}
+          <span>{{ movieCards.length }}</span>
+        </h2>
+      }
+    </div>
+    <div class="search-section">
+      <app-input></app-input>
+    </div>
+    <div class="segmented-control-section">
+      <app-segmented-control [config]="segments"></app-segmented-control>
+    </div>
+    <div class="movies-cards-section">
+      @for (movie of movieCards; track $index) {
+        <div class="movie-card">
+          <app-movie-card [config]="movie"></app-movie-card>
+        </div>
+      }
+    </div>
+  </div>
+</div>
+
