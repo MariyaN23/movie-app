@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {TestComponent} from './pages/test/test.component';
 import {DetailsComponent} from './pages/details/details.component';
+import {ViewCategoryComponent} from './pages/view-category/view-category.component';
 
 export const routes: Routes = [
   {
@@ -25,4 +26,16 @@ export const routes: Routes = [
     path: 'movie/:movie_id',
     component: DetailsComponent
   },
+  {
+    path: 'movies',
+    component: ViewCategoryComponent
+  },
+  {
+    path: 'tvshows',
+    component: ViewCategoryComponent
+  },
+  /*{
+    path: 'suggest',
+    component:
+  },*/
 ];

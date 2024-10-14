@@ -1,3 +1,68 @@
-
+.details-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.details-container .detail-content {
+  width: 80%;
+  margin-bottom: 62px;
+  height: 100%;
+}
+.details-container .detail-content .details-section {
+  display: flex;
+  width: 100%;
+  margin: 180px 0 100px;
+  column-gap: 80px;
+  flex-wrap: wrap;
+}
+.details-container .detail-content .details-section .img-section {
+  width: 40%;
+  border-radius: 25px;
+  min-width: 400px;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.details-container .detail-content .details-section .info-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  flex: 1;
+}
+.details-container .detail-content .details-section .info-section .title {
+  font-size: 24px;
+  color: var(--app-primary);
+  font-weight: bold;
+}
+.details-container .detail-content .details-section .info-section .overview {
+  font-size: 16px;
+  color: var(--app-text-gray-400);
+}
+.details-container .detail-content .details-section .info-section .separate-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+.details-container .detail-content .details-section .info-section .separate-box .box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.details-container .detail-content .details-section .info-section .separate-box .box .box-title {
+  color: var(--app-text-gray-400);
+  font-size: 16px;
+  margin: 0;
+}
+.details-container .detail-content .details-section .info-section .separate-box .box .box-description {
+  color: var(--app-primary);
+  font-size: 20px;
+}
+.details-container .detail-content .details-section .info-section .vertical {
+  flex-direction: column;
+}
 
 /*# sourceMappingURL=details.component.css.map */

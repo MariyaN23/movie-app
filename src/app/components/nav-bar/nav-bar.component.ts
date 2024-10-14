@@ -36,6 +36,7 @@ export class NavBarComponent {
   selectedItem(nav: NavItemConfig) {
     this.navItems.map((item: NavItemConfig)=> {
       item.active = nav.name === item.name
+      this.router.navigateByUrl(nav.path)
     })
   }
   homePage() {
