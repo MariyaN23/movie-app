@@ -1,1 +1,20 @@
-<p>view-category works!</p>
+<div class="view-category-container">
+  <div class="view-category-content">
+    <div class="title-container">
+      <p class="mini-title">CineMatch</p>
+      @if (title) {
+        <p class="title">{{ title }}</p>
+      }
+    </div>
+    <div class="search-container">
+      <app-input></app-input>
+    </div>
+    <div class="movie-cards-section">
+      @for (item of cards; track $index) {
+        <div class="movie-card">
+          <app-movie-card [config]="item"></app-movie-card>
+        </div>
+      }
+    </div>
+  </div>
+</div>

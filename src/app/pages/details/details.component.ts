@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DetailBannerComponent} from '../../components/detail-banner/detail-banner.component';
 import {ActivatedRoute} from '@angular/router';
 import {GenericHttpService} from '../../services/generic-http.service';
@@ -22,7 +22,7 @@ import {CommonModule} from '@angular/common';
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
-export class DetailsComponent {
+export class DetailsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
               private genericService: GenericHttpService) {
   }
@@ -35,9 +35,9 @@ export class DetailsComponent {
       if (paramMap.params.movie_id) {
         this.getMovieById(paramMap.params.movie_id)
       }
-      /*if (paramMap.params.series_id) {
-        this.getById(paramMap.params.series_id)
-      }*/
+      if (paramMap.params.series_id) {
+        this.getTVShowById(paramMap.params.series_id)
+      }
     })
   }
 
@@ -86,5 +86,67 @@ export class DetailsComponent {
           console.log(err)
         }
       })
+  }
+  getTVShowById(id: string) {
+    this.genericService.httpGet(Endpoints.TV_SHOW_ID(id)).subscribe({
+      next: (res: TVDetailsResult) => {
+        this.bannerConfig = {
+          img: Endpoints.IMAGE_BASE + `/w1280${res.backdrop_path}`,
+          pageName: 'TV Shows',
+          path: 'tvshows',
+          title: res.name
+        }
+        let genresResult = ''
+        res.genres.map((item: Genre, index: number) => {
+          genresResult += `${item.name}${index === res.genres.length - 1 ? '' : ', '}`
+        })
+
+        this.config = {
+          img: Endpoints.IMAGE_BASE + `/w1280${res.backdrop_path}`,
+          subtitle: res.tagline,
+          description: res.overview,
+          rate: res.vote_average,
+          isVertical: false,
+          detailsCards: [
+            {
+              title: 'Type',
+              description: 'TV Show',
+            },
+            {
+              title: 'Status',
+              description: res.status,
+            },
+            {
+              title: 'First air date',
+              description: res.first_air_date,
+            },
+            {
+              title: 'Last air date',
+              description: res.last_air_date,
+            },
+            {
+              title: 'Number of seasons',
+              description: res.number_of_seasons.toString(),
+            },
+            {
+              title: 'Number of episodes',
+              description: res.number_of_episodes.toString(),
+            },
+            {
+              title: 'Episode run time',
+              description: res.episode_run_time.toString(),
+            },
+            {
+              title: 'Genres',
+              description: genresResult,
+            },
+          ],
+          details: ''
+        }
+      },
+      error: (err: Error) => {
+        console.log(err)
+      }
+    })
   }
 }

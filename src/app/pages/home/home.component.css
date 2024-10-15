@@ -26,7 +26,7 @@
 .home-page-container .home-page-content .movies-cards-section {
   display: flex;
   flex-wrap: wrap;
-  align-self: flex-start;
+  justify-content: center;
   margin: 0;
   gap: 24px;
 }
