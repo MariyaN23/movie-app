@@ -7,9 +7,10 @@
       }
     </div>
     <div class="search-container">
-      <app-input></app-input>
+      <app-input (sendResult)="setSearchResult($event)"></app-input>
     </div>
     <div class="movie-cards-section">
+      <div  *ngIf="!cards.length">{{message}}</div>
       @for (item of cards; track $index) {
         <div class="movie-card">
           <app-movie-card [config]="item"></app-movie-card>

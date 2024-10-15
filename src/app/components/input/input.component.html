@@ -1,4 +1,6 @@
 <div class="input-container">
   <i class="bi bi-search"></i>
-  <input type="search" placeholder="Search for movies or shows"/>
+  <input [(ngModel)]="inputText"
+         (ngModelChange)="onInputChange()"
+         type="search" placeholder="Search for movies or shows"/>
 </div>

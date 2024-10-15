@@ -4,12 +4,9 @@
       <p>CineMatch</p>
       @if (title) {
         <h2>{{ title }}
-          <span>{{ movieCards.length }}</span>
+          <span>🔥 {{ movieCards.length }}</span>
         </h2>
       }
-    </div>
-    <div class="search-section">
-      <app-input></app-input>
     </div>
     <div class="segmented-control-section">
       <app-segmented-control [config]="segments"></app-segmented-control>
