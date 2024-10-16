@@ -26,6 +26,7 @@ export class ViewCategoryComponent implements OnInit {
   title: string = ''
   message: string = ''
   cards: MovieCardConfig[] = []
+  currentPage: number = 1
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router,
               private genericService: GenericHttpService) {

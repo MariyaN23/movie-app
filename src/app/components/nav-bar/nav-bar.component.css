@@ -12,7 +12,7 @@
   justify-content: space-between;
 }
 .nav-bar-container .nav-content .logo-section {
-  width: 40px;
+  min-width: 40px;
   height: 40px;
   background-image: url("../../../../assets/images/logo.svg");
   cursor: pointer;

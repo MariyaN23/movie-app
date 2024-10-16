@@ -22,12 +22,12 @@ export class NavBarComponent {
       path: 'tvshows',
       active: false
     },
-    {
+    /*{
       name: 'Suggest me',
       path: 'suggestions',
       icon: 'bi bi-arrow-right',
       active: false
-    },
+    },*/
   ]
 
   constructor(private router: Router) {
@@ -41,5 +41,8 @@ export class NavBarComponent {
   }
   homePage() {
     this.router.navigateByUrl('')
+    this.navItems.map((item: NavItemConfig)=> {
+      item.active = false
+    })
   }
 }
